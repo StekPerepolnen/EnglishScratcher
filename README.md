@@ -4,7 +4,7 @@
 
 ![Иллюстрация к проекту](https://github.com/StekPerepolnen/EnglishScratcher/blob/master/images/example.jpg)
 
-№ Usage
+# Usage
 
 Человек, который желает учить слова по карточкам, копирует нужные ему слова в свой файл и повторяет лишь то что ему нужно
 
