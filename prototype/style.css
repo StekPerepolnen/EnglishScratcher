@@ -1,0 +1,250 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header,
+footer {
+    height: 30px;
+}
+
+main {
+    flex: 1;
+}
+
+.words-on-card {
+    font-size: 8px;
+    vertical-align: middle;
+    display: inline-block;
+    line-height: 1em;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.part-of-speech {
+    color: orange;
+}
+
+.middle-field {
+    width: 760px;
+    height: 300px;
+    vertical-align: middle;
+    border-color: coral;
+    border-style: dashed;
+    border-radius: 15px;
+    border-width: 2px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hand-container {
+    width: 100%;
+}
+
+.center-commands {
+    width: 300px;
+}
+
+.playingCards.rotateHand ul.hand li:nth-child(1) {
+    transform: translate(1.5em, 4.2em) rotate(-30deg);
+}
+
+.playingCards ul.hand li:nth-child(1) {
+    left: 1em;
+}
+
+.playingCards.rotateHand ul.hand li:nth-child(2) {
+    transform: translate(1.5em, .5em) rotate(-15deg)
+}
+
+.playingCards ul.hand li:nth-child(2) {
+    left: 10em
+}
+
+.playingCards.rotateHand ul.hand li:nth-child(3) {
+    transform: translate(1.5em, -0.8em) rotate(0deg)
+}
+
+.playingCards ul.hand li:nth-child(3) {
+    left: 20em
+}
+
+.playingCards.rotateHand ul.hand li:nth-child(4) {
+    transform: translate(1.5em, .5em) rotate(15deg)
+}
+
+.playingCards ul.hand li:nth-child(4) {
+    left: 30em
+}
+
+.playingCards.rotateHand ul.hand li:nth-child(5) {
+    transform: translate(1.5em, 4.2em) rotate(30deg)
+}
+
+.playingCards ul.hand li:nth-child(5) {
+    left: 39em
+}
+
+.flex-main-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex-row-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-row-cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.flex-row-decks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 760px;
+    height: 140px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.left-commands {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-commands {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.big-card {
+    width: 480px;
+    height: 300px;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card.big-card .words-on-card {
+    font-size: 22px;
+}
+
+.deck-place {
+    position: relative;
+    width: 95px;
+    height: 120px;
+    margin-left: 15px;
+}
+
+.deck-track {
+    position: absolute;
+    left: -12px;
+    top: 10px;
+    border-color: lightgray;
+    border-style: dotted;
+    border-radius: 15px;
+    border-width: 2px;
+    width: 95px;
+    height: 120px;
+}
+
+.main-deck-place {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    margin-left: 15px;
+}
+
+.main-deck-track {
+    position: absolute;
+    left: -12px;
+    top: 10px;
+    border-color: lightgray;
+    border-style: dotted;
+    border-radius: 15px;
+    border-width: 2px;
+    width: 200px;
+    height: 120px;
+}
+
+.search-card {
+    width: 180px;
+}
+
+.word-example {
+    font-style: italic;
+    color: lightblue;
+}
+
+.spoiler {
+    background: gray;
+    color: gray;
+    width: 300px;
+    margin: 0 auto;
+}
+
+.spoiler:hover,
+.spoilered {
+    color: white;
+}
+
+.add-card {
+    font-size: 50px;
+    color: lightgray;
+}
+
+.shuffle {
+    font-size: 36px;
+    color: gray;
+    margin-top: 60px;
+}
+
+.half-circle-container {
+    width: 200px;
+    height: 100px;
+    position: relative;
+}
+
+.half-circle {
+    position: absolute;
+    top: 2px;
+    width: 200px;
+    height: 100px;
+    background-color: lightgrey;
+    border-top-left-radius: 110px;
+    border-top-right-radius: 110px;
+    border: 10px solid coral;
+    border-bottom: 0;
+}
+
+.deck .card {
+    background-color: lightgray;
+}
+
+.hand .card.active {
+    box-shadow: 0.2em 0.2em 0.5em coral;
+    border: 1px solid coral;
+}
+
+.deck-track.active {
+    border-color: coral;
+    border-style: dashed;
+}
