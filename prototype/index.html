@@ -27,7 +27,7 @@
 		<![endif]-->
 	<!-- the following js and css is not part of the CSS cards, but only for this example page -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-	<script type="text/javascript">< !--
+	<!-- <script type="text/javascript">
 			$(document).ready(function () {
 				$('.options').addClass('active');
 				$('.toggle li').click(function () {
@@ -38,24 +38,32 @@
 					$('html').attr('xml:lang', $(this).text());
 				});
 			});
-		//--></script>
+	</script> -->
+	<script type="text/javascript" src="./script.js"></script>
 </head>
 
 <body>
 	<div class="wrapper">
 		<header>I'm a 30px tall header</header>
 		<main>
-			<div class="flex-main-column playingCards fourColours rotateHand">
-				<div class="flex-row-card">
-					<div class="card big-card">
-						<span class="words-on-card">
+			<div class="flex-row-card" hidden>
+				<div class="big-card">
+					<div class="face front">
+						<div class="card-meta">
+							241
+						</div>
+						<div>
 							<p><span class="part-of-speech">(verb)</span> to say that someone has done something bad</p>
 							<p class="word-example">He's been [...]d of robbery/murder</p>
-							<p class="word-example">Are you accusing me of lying?</p>
-							<!-- <p class="spoiler">accuse</p> -->
-						</span>
+							<p class="word-example">Are you [...]ing me of lying?</p>
+						</div>
+					</div>
+					<div class="face back">
+						<p>accuse</p>
 					</div>
 				</div>
+			</div>
+			<div class="flex-main-column playingCards fourColours rotateHand">
 				<div class="flex-row-cards">
 					<div class="middle-field">
 						<div class="hand-container">

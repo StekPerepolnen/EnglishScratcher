@@ -1,3 +1,23 @@
+.main {
+    position: relative;
+}
+
+.flex-row-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.5);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .wrapper {
     height: 100vh;
     display: flex;
@@ -26,8 +46,8 @@ main {
 }
 
 .middle-field {
-    width: 760px;
-    height: 300px;
+    width: 300px;
+    height: 760px;
     vertical-align: middle;
     border-color: coral;
     border-style: dashed;
@@ -95,12 +115,6 @@ main {
     align-items: center;
 }
 
-.flex-row-card {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
 .flex-row-cards {
     display: flex;
     flex-direction: row;
@@ -133,18 +147,105 @@ main {
     align-items: center;
 }
 
-.card.big-card {
-    width: 480px;
-    height: 300px;
-    margin: 30px;
-    padding: 20px;
+.card-meta {
+    width: 100%;
+    border-top: lightblue 5px double;
+    border-bottom: lightblue 5px double;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.big-card,
+.face.front,
+.face.back {
+    width: 68vh;
+    height: 50vh;
+}
+
+.big-card {
+    position: relative;
+    background: transparent;
+}
+
+.face.front {
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 2rem;
+    padding: 40px;
+
+    background:
+        linear-gradient(63deg, #FFF 23%, transparent 23%) 7px 0,
+        linear-gradient(63deg, transparent 74%, #FCFCFC 78%),
+        linear-gradient(63deg, transparent 34%, #FCFCFC 38%, #FCFCFC 58%, transparent 62%),
+        #FFF;
+    background-size: 16px 48px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 36px;
+    align-items: flex-start;
+
+    transform: rotateY(0deg);
+    transition: all 0.8s ease-in-out;
+    /* -webkit-backface-visibility: visible; */
+    backface-visibility: visible;
+    z-index: 10;
+    box-shadow: 8px 8px 20px #555;
+}
+
+.face.back {
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 2rem;
+    padding: 40px;
+    background-color: white;
+
+    background:
+        linear-gradient(63deg, #FFF 23%, transparent 23%) 7px 0,
+        linear-gradient(63deg, transparent 74%, #FCFCFC 78%),
+        linear-gradient(63deg, transparent 34%, #FCFCFC 38%, #FCFCFC 58%, transparent 62%),
+        #FFF;
+    background-size: 16px 48px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-size: 52px;
+    align-items: center;
+
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: all 0.8s ease-in-out;
+    /* -webkit-backface-visibility: hidden; */
+    backface-visibility: hidden;
+    z-index: 5;
+    box-shadow: 8px 8px 20px #555;
 }
 
-.card.big-card .words-on-card {
-    font-size: 22px;
+/* Flip the card and apply easing */
+.big-card.flip .front {
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    transition: all .8s ease-in-out;
+    /* -webkit-backface-visibility: hidden; */
+    backface-visibility: hidden;
+    z-index: 5;
+}
+
+.big-card.flip .back {
+    transform: rotateY(0deg);
+    transform-style: preserve-3d;
+    transition: all .8s ease-in-out;
+    /* -webkit-backface-visibility: visible; */
+    backface-visibility: visible;
+    z-index: 10;
+}
+
+@mixin rounded($amount) {
+    border-radius: $amount;
 }
 
 .deck-place {
